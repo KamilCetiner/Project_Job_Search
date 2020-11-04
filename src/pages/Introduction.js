@@ -1,7 +1,9 @@
 import Axios from 'axios'
 import React, { useState, useEffect } from 'react';
-import {SafeAreaView, View, Text, ScrollView, FlatList, TouchableOpacity, Sea} from 'react-native';
+import {SafeAreaView, View, Text, ScrollView, FlatList, TouchableOpacity} from 'react-native';
+
 import {introduction} from '../styles';
+
 import {TopicItem, JobNews, SearchBar} from '../components';
 
 const topics = [
@@ -88,6 +90,10 @@ const Introduction = (props) => {
 
   }
 
+  const selectLanguage = (select) => {
+    props.navigation.navigate('Jobs', {selectedLanguage: select})
+  }
+
 
   const renderItemNews = ({item}) => <JobNews myNews={item} /> 
   
@@ -119,8 +125,8 @@ const Introduction = (props) => {
         <View style={introduction.scrollcontain}>
 
         <ScrollView horizontal contentContainerStyle={{alignItems: 'center',  backgroundColor: '#fafafa'}}>
-          {topics.map((value) => {
-            return <TopicItem key={value.id} item={value} onSelect={() => selectLanguage(value.name)} />;
+          {topics.map((t) => {
+            return <TopicItem key={t.id} item={t} onSelect={() => selectLanguage(t.name)} />;
           })}
 
           

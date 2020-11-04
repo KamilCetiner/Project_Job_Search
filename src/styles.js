@@ -14,42 +14,41 @@ export const topicItem = StyleSheet.create({
 
 export const searchBar = StyleSheet.create({
     container: {
-        height : 80,        
+        height : 80,
+        width: Dimensions.get('window').width * 0.90,      
         backgroundColor: '#1976d2',
-        marginHorizontal: 5,
-        marginBottom: 80,
-        borderRadius: 10
+        marginHorizontal: 15,
+        marginBottom: 10,
+        borderRadius: 25
 
         
 
     },
     input : {
         backgroundColor: 'white',
-        marginHorizontal: 30,
-        marginTop:25, 
-        height: 40
-        
-    },
-
-    touch : {
-       
-        backgroundColor: '#1976d2',
-        width: Dimensions.get('window').width *0.30,
-        height: Dimensions.get('window').height / 14,
-        marginVertical: 35,
-        justifyContent : 'center',
+        marginHorizontal: 12,        
+        marginVertical: 15,
+        height: 50,
         borderRadius: 15
-
-    },
-    text: {
-        color: 'white',
-        textAlign: 'center',
-        fontWeight: 'bold'
         
-
-    }
+    },
 
 })
+
+export const jobs = StyleSheet.create({
+    modalBackground: {
+      backgroundColor: 'white',
+      borderRadius: 10,
+      padding: 10
+    },
+    jobTitle: {
+      fontSize: 20,
+      fontWeight: 'bold'
+    },
+    jobDesc: {
+      padding: 5
+    }
+  })
 
 
 
@@ -62,7 +61,7 @@ export const introduction = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'space-evenly',
       alignItems : 'center',
-      borderBottomWidth: 2,
+      borderBottomWidth: 4,
       borderBottomColor: '#3f51b5'
       
       
@@ -113,3 +112,18 @@ export const introduction = StyleSheet.create({
           fontSize: 20,
       }
   })
+
+
+
+  export const jobItem = StyleSheet.create({
+    container: {
+      padding: 12,
+      margin: 7,
+      borderRadius: 6,
+      borderWidth: 1,
+      borderColor: '#bdbdbd'
+    },
+    jobname: {
+      fontWeight: 'bold',
+    },
+  });
