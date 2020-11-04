@@ -2,7 +2,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import {Introduction } from './pages';
+import {Introduction, SavedJobs } from './pages';
 
 const Stack = createStackNavigator();
 
@@ -11,8 +11,8 @@ function Router() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Intro" component={Introduction} />
-        {/* <Stack.Screen name="Jobs" component={Jobs} />
-        <Stack.Screen name="SavedJobs" component={SavedJobs} /> */}
+         {/* <Stack.Screen name="Jobs" component={Jobs} /> */}
+        <Stack.Screen name="SavedJobs" component={SavedJobs} /> 
       </Stack.Navigator>
     </NavigationContainer>
   );
