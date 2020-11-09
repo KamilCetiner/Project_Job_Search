@@ -33,8 +33,10 @@ $ npm install
 
 $ npx react-native run-android
 
+```
+## PACKAGES
 
-PACKAGES
+```bash
 
 $ npm install @react-navigation/native
 
