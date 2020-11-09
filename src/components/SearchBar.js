@@ -8,6 +8,7 @@ const SearchBar = (props) => {
         <View style={searchBar.container} >
 
             <TextInput 
+            placeholder='Search a job'
             style= {searchBar.input}               
                 onChangeText={(value) => props.onSearch(value)}
             />

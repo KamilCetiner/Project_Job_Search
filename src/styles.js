@@ -14,7 +14,7 @@ export const topicItem = StyleSheet.create({
 
 export const searchBar = StyleSheet.create({
     container: {
-        height : 80,
+        height : 64,
         width: Dimensions.get('window').width * 0.90,      
         backgroundColor: '#1976d2',
         marginHorizontal: 15,
@@ -26,9 +26,9 @@ export const searchBar = StyleSheet.create({
     },
     input : {
         backgroundColor: 'white',
-        marginHorizontal: 12,        
-        marginVertical: 15,
-        height: 50,
+        marginHorizontal: 7,        
+        marginVertical: 5,
+        height: 40,
         borderRadius: 15
         
     },

@@ -6,67 +6,64 @@ import { JobItem } from '../components'
 
 const SavedJobs = (props) => {
   const [jobList, setJobList] = useState([]);
-  const [removeList, setRemoveList] = useState([]);
-  const [delItem, setDelItem] = useState([]);
 
-  AsyncStorage.getItem("@SAVED_JOBS")
+
+  AsyncStorage.getItem("@SAVE_JOBS")
   .then(res => {
     const list = JSON.parse(res);
     setJobList(list);
   })
 
-  
- 
+
+  function removeValue() {
+    AsyncStorage.removeItem("@SAVE_JOBS")   
+  }
 
 
-function removeValue() {
+  const onRemoveItem = (num) =>{  
 
-  AsyncStorage.removeItem("@SAVED_JOBS")
-  .then(mov => {
-    const rmlist = JSON.parse(mov);
-    setRemoveList(rmlist);
-  })
-
+    const newJob = [...jobList]
+    
+    let jobIndex = newJob.findIndex(val => val === num)  
+             
+    newJob.splice(jobIndex, 1) 
+    
+    AsyncStorage.setItem("@SAVE_JOBS", JSON.stringify(newJob))
+    
 }
 
 
-function onOneItemRemove(number) {
-  
-  console.log(item)
-}
+  const renderItemJobs=({item}) => {
+    return <JobItem job={item}  onDelete={() => onRemoveItem(item)} />
+  }
+
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{flex:1}}  >
 
       
-      <TouchableOpacity
-
-      onPress={() => onOneItemRemove(item.id)}
-      
-      
-      >
+      <View style={{flex:1}} >
         <FlatList
-          keyExtractor={(item, index) => String(index)}
+          keyExtractor={(_, index) => index.toString()}
           data={jobList}
-          renderItem={({item}) => <JobItem job={item}/>}
+          renderItem={renderItemJobs}
+          ListEmptyComponent={() => <Text style={{alignSelf:"center", fontSize:20, color:"#dd4470"}} >No job finden</Text>}
         />
-      </TouchableOpacity>
+      </View>
 
 
-      <View >
+      <View style={{position: 'absolute', top: 500, left: 100,}} >
+        
       <TouchableOpacity
           style={{
             
             backgroundColor: 'blue',
             padding: 30,
-            borderRadius: 10,
-            position: 'relative',
-            top: 500
-          
-
-           
+            borderRadius: 100
+                       
           }}
           onPress={() => removeValue()}
+         
         >
           <Text style={{color: 'white'}}>Kayıtlıları Sil</Text>
         </TouchableOpacity>

@@ -34,12 +34,12 @@ const Jobs = (props) => {
   ); 
 
   const onJobSave = async () => {
-    let savedJobList = await AsyncStorage.getItem("@SAVED_JOBS");
+    let savedJobList = await AsyncStorage.getItem("@SAVE_JOBS");
     savedJobList = savedJobList == null ? [] : JSON.parse(savedJobList)
 
     const updatedJobList = [...savedJobList, selectedJob];
 
-    AsyncStorage.setItem("@SAVED_JOBS", JSON.stringify(updatedJobList));
+    AsyncStorage.setItem("@SAVE_JOBS", JSON.stringify(updatedJobList));
 
   }
 

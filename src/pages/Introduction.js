@@ -113,14 +113,14 @@ const Introduction = (props) => {
           <Text style={introduction.bannerText_2}>Login</Text>
         </View>
 
+        <View>  
+
+
         <SearchBar onSearch={(value) => searchJob(value)} />
 
-
-        <View>
-
-       
-
         </View>
+
+        
 
         <View style={introduction.scrollcontain}>
 

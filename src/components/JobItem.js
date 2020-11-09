@@ -8,6 +8,7 @@ const JobItem = (props) => {
       <TouchableOpacity
         style={jobItem.container}
         onPress={props.onSelect}
+        onLongPress={props.onDelete}
       >
           <Text style={jobItem.jobname}>{props.job.title}</Text>
           <Text>{props.job.type} / {props.job.location}</Text>
