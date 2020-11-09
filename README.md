@@ -1,14 +1,14 @@
-h1 align="center">City-Yelp-App-with-React-Native</h1>
+h1 align="center">Project_Job_Search</h1>
 
-A work about making a City-Yelp-App-with-React-Native
+
 
 ## Description
 
-A work about making a City-Yelp-App-with-React-Native
+A work about making a Project_Job_Search
 
 ## This is a short video introduction about this app
 
-![screenshot](overview/Screenshot.gif)
+![screenshot](overview/Job.gif)
 
 
 ### At the end of the project, following topics are to be covered;
