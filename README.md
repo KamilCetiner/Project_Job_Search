@@ -28,7 +28,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 
-$ git clone https://github.com/Talha-35/City-Yelp-App-with-React-Native.git
+$ git clone https://github.com/KamilCetiner/Project_Job_Search.git
 
 $ npm install
 
@@ -50,6 +50,6 @@ $ npm install --save react-native-vector-icons
 
 ## Contact
 
-- GitHub [@Talha](https://github.com/Talha-35)
-- Linkedin [@Talha](https://www.linkedin.com/in/talha-%C3%BClk%C3%BCmen-4854391b8/)
+- GitHub [@Kamil](https://github.com/KamilCetiner)
+- Linkedin [@Kamil](https://www.linkedin.com/in/kamil-%C3%A7etiner-b09a601ab/)
 
