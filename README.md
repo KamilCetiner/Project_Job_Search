@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 <h1 align="center">Project_Job_Search</h1>
-=======
-h1 align="center">Project_Job_Search</h1>
 
-
->>>>>>> 256780087493d5aea105846ffc98d25b5c4c4769
 
 ## Description
 
@@ -39,7 +34,7 @@ $ npm install
 $ npx react-native run-android
 
 
-<h1 align="center">PACKAGES</h1>
+PACKAGES
 
 $ npm install @react-navigation/native
 
@@ -55,9 +50,6 @@ $ npm install --save react-native-vector-icons
 ## Contact
 
 - GitHub [@Kamil](https://github.com/KamilCetiner)
-<<<<<<< HEAD
-- Linkedin [@Kamil](https://www.linkedin.com/in/kamil-%C3%A7etiner-b09a601ab/)
-=======
 - Linkedin [@Kamil](https://www.linkedin.com/in/kamil-%C3%A7etiner-b09a601ab/)
 
->>>>>>> 256780087493d5aea105846ffc98d25b5c4c4769
+
