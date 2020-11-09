@@ -1,6 +1,7 @@
 import Axios from 'axios';
 import Modal from 'react-native-modal';
 import React, {useState, useEffect} from 'react';
+import {WebView} from 'react-native-webview';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {SafeAreaView, Text, View, FlatList, Button, TouchableOpacity} from 'react-native';
 
@@ -70,12 +71,14 @@ const Jobs = (props) => {
           }}
           onPress={() => props.navigation.navigate("SavedJobs")}
         >
-          <Text style={{color: 'white'}}>Kayıtlıları Gör</Text>
+          <Text style={{color: 'white'}}>View Records</Text>
         </TouchableOpacity>
 
      
 
-        <Modal isVisible={modalFlag} onBackdropPress={() => setModalFlag(false)}>
+        <Modal
+          isVisible={modalFlag}
+          onBackdropPress={() => setModalFlag(false)}>
           <View style={jobs.modalBackground}>
             <View style={{borderBottomWidth: 2, borderColor: '#bdbdbd'}}>
               <Text style={jobs.jobTitle}>{selectedJob.title}</Text>
@@ -85,9 +88,11 @@ const Jobs = (props) => {
               <Text>{selectedJob.company}</Text>
             </View>
             <View style={jobs.jobDesc}>
-              <Text numberOfLines={5}>{selectedJob.description}</Text>
+              <WebView
+                source={{html: selectedJob.description}}
+              />
             </View>
-            <Button title="Kaydet" onPress={onJobSave} />
+            <Button title="Save" onPress={onJobSave} />
           </View>
         </Modal>
       </View>

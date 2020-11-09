@@ -47,7 +47,7 @@ const SavedJobs = (props) => {
           keyExtractor={(_, index) => index.toString()}
           data={jobList}
           renderItem={renderItemJobs}
-          ListEmptyComponent={() => <Text style={{alignSelf:"center", fontSize:20, color:"#dd4470"}} >No job finden</Text>}
+          ListEmptyComponent={() => <Text style={{alignSelf:"center", marginTop: 50, fontWeight: 'bold', fontSize:20, color:"#dd4470"}} >NOTHING</Text>}
         />
       </View>
 
@@ -57,15 +57,16 @@ const SavedJobs = (props) => {
       <TouchableOpacity
           style={{
             
-            backgroundColor: 'blue',
-            padding: 30,
-            borderRadius: 100
+            backgroundColor: 'red',
+            padding: 20,
+            borderRadius: 110,
+            marginLeft: 40
                        
           }}
           onPress={() => removeValue()}
          
         >
-          <Text style={{color: 'white'}}>Kayıtlıları Sil</Text>
+          <Text style={{color: 'white'}}>Reset</Text>
         </TouchableOpacity>
         </View>
     </SafeAreaView>
