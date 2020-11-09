@@ -1,6 +1,4 @@
-h1 align="center">Project_Job_Search</h1>
-
-
+<h1 align="center">Project_Job_Search</h1>
 
 ## Description
 
