@@ -9,6 +9,11 @@ A work about making a Project_Job_Search
 
 ![screenshot](overview/Job.gif)
 
+## This is a photo introduction about this app
+
+
+<img src= "overview/photo.jpg" width =400 > 
+
 
 ### At the end of the project, following topics are to be covered;
 
