@@ -5,7 +5,7 @@
 
 A work about making a Project_Job_Search
 
-## This is a short video introduction about this app
+## This is a short video introduction about this app.
 
 ![screenshot](overview/Job.gif)
 
